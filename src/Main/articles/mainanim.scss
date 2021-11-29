@@ -1,0 +1,39 @@
+.mainAnim {
+  height: 8rem;
+  //   border: brown 1px solid;
+  position: relative;
+  .card {
+    background: rgba(44, 90, 121, 0.918);
+    border-radius: 0.6rem;
+    border: 2px solid rgba(255, 255, 255, 0.281);
+    box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.959);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    $d: 5rem;
+    width: $d;
+    height: $d;
+
+    transition: 1s all ease-in;
+    .card__icon {
+      width: 90%;
+      height: 90%;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .mainAnim {
+    margin-top: 2.5rem;
+    margin-left: 5%;
+    height: 10rem;
+    .card {
+      $d: 8rem;
+      width: $d;
+      height: $d;
+    }
+  }
+}

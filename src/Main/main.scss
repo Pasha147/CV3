@@ -1,0 +1,94 @@
+.main {
+  color: rgba(255, 255, 255, 0.829);
+  flex: 1 1 auto;
+  // border: 2px solid rgb(97, 204, 93);
+  display: flex;
+  flex-direction: column;
+}
+
+.navLink {
+  color: rgba(0, 0, 0, 0.829);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(150, 150, 150, 0.5),
+      rgba(39, 39, 39, 0.87)
+    ),
+    url("../img/river1.jpg");
+
+  min-width: 4rem;
+  margin: 0.25rem 0.15rem;
+  height: 1.6rem;
+  text-shadow: 0 0 3px rgba(18, 18, 19, 0.5);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0 0.25rem;
+  background-color: rgba(189, 216, 238, 0.747);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.25rem rgba(189, 216, 238, 0.562);
+}
+
+nav {
+  transition: 0.3s all ease-in;
+  padding: 0.25rem;
+  height: auto;
+  border: rgb(27, 27, 20) solid 1px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .navBtn-active {
+    text-shadow: 0 0 3px rgba(231, 231, 233, 0.5);
+    color: rgba(255, 255, 255, 0.705);
+    // background-color: rgba(233, 237, 240, 0.925);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(209, 202, 202, 0.5),
+        rgba(99, 99, 99, 0.87)
+      ),
+      url("../img/river1.jpg");
+    box-shadow: 0 0 1rem rgba(242, 244, 247, 0.986);
+  }
+}
+
+article {
+  color: rgba(255, 255, 255, 0.76);
+  background-color: rgb(8, 31, 48);
+  // border: rgb(239, 243, 243) solid 2px;
+  height: 20rem;
+  flex: 1 1 auto;
+}
+
+.light {
+  nav {
+    background-color: rgba(134, 159, 173, 0.788);
+    border: rgb(27, 27, 20) solid 1px;
+    button {
+      color: rgba(217, 250, 237, 0.705);
+      // background-color: rgba(27, 37, 44, 0.863);
+      background-image: linear-gradient(
+          to bottom,
+          rgba(112, 112, 112, 0.5),
+          rgba(39, 39, 39, 0.87)
+        ),
+        url("../img/river1.jpg");
+      box-shadow: 0 0 0.25rem rgba(84, 90, 95, 0.747);
+    }
+  }
+  article {
+    color: rgba(0, 0, 0, 0.747);
+    background-color: rgb(113, 142, 165);
+  }
+  .navBtn-active {
+    color: white;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.979);
+    border: rgb(230, 236, 236) solid 2px;
+    border-radius: 6px;
+    box-shadow: 0 0 0.5rem rgb(255, 255, 255);
+    background-color: rgba(27, 37, 44, 0.315);
+  }
+}

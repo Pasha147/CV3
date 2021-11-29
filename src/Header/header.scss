@@ -1,0 +1,91 @@
+.header {
+  transition: 0.3s all ease-in;
+  // $bg: rgb(0, 0, 0, 0.5);
+  box-shadow: 0px 0.5rem 0.5rem #283549;
+  position: relative;
+  color: #ffffffda;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  // letter-spacing: 0.05em;
+  text-align: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(39, 39, 39, 0.384),
+      rgba(20, 20, 20, 0.932)
+    ),
+    url("../img/river1.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  &__logo {
+    padding: 0.3rem 0 0.3rem 0.25rem;
+    img {
+      border: 3px solid #e5e9ee7c;
+      box-shadow: 0 0 1rem #ffffffe3;
+      border-radius: 50%;
+      width: 8.8rem;
+    }
+  }
+  &__info {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 2.6rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .underline {
+    box-shadow: 0 0 1rem #ffffffe3;
+    // margin-top: 0.5rem;
+    height: 2px;
+    width: 85%;
+    background-color: #8fafd465;
+    ::after {
+      content: "";
+    }
+  }
+
+  // border: 2px solid rgb(51, 47, 47);
+}
+
+.light .header {
+  box-shadow: 0px 0.5rem 0.5rem #283549;
+  color: #103246da;
+  text-shadow: 0 0 8px rgba(18, 18, 19, 0.5);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.685),
+      rgba(54, 60, 65, 0.808)
+    ),
+    url("../img/river1.jpg");
+
+  &__logo {
+    img {
+      border: 2px solid #5a6f883f;
+      box-shadow: 0 0 0.5rem #f7f7f731;
+    }
+  }
+  .underline {
+    background-color: #8fafd4cb;
+    box-shadow: 0 0 0.5rem #f7f7f79a;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    h1 {
+      font-size: 6.6rem;
+    }
+    &__logo {
+      img {
+        width: 12rem;
+      }
+    }
+  }
+}

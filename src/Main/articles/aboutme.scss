@@ -1,0 +1,181 @@
+.aboutMe {
+  //   border: yellow 2px solid;
+  height: auto;
+  .iconsCont {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+    // margin-bottom: 0.5rem;
+    // border: 1px solid white;
+
+    p {
+      margin-top: 0.2rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    $h: 7.2rem;
+    .family {
+      min-width: 16rem;
+      max-width: 20rem;
+      width: 50%;
+      // min-width: 16rem;
+      // max-width: 18rem;
+      //   padding: 00.25rem;
+      .family__icons {
+        position: relative;
+        width: 100%;
+        height: $h;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid white;
+        border-radius: 0.8rem;
+        background: rgba(255, 255, 255, 0.829);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        .age1,
+        .age2,
+        .age3,
+        .age4,
+        .age5 {
+          position: absolute;
+          color: rgb(255, 255, 255);
+          text-shadow: 0 0 2px rgba(255, 255, 255, 0.829);
+        }
+        .age1 {
+          bottom: 50%;
+          left: 6%;
+        }
+        .age2 {
+          bottom: 28%;
+          left: 52%;
+        }
+        .age3 {
+          bottom: 22%;
+          left: 70%;
+        }
+        .age4 {
+          bottom: 22%;
+          left: 86%;
+        }
+        .age5 {
+          bottom: 50%;
+          left: 28%;
+        }
+
+        .icon-p {
+          font-size: 4rem;
+          width: 18%;
+          height: 100%;
+        }
+
+        .icon-pw {
+          width: 28%;
+        }
+        .iconChild {
+          font-size: 4rem;
+          width: 16%;
+          height: 75%;
+        }
+        .icon-ch1 {
+          height: 90%;
+          width: 20%;
+        }
+      }
+    }
+    .badHabits {
+      width: 30%;
+      max-width: 12rem;
+      min-width: 8rem;
+      // border: red 1px solid;
+      padding: 0;
+      margin: 0;
+
+      .cards {
+        // width: $h;
+        // height: $h;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        // border: red 1px solid;
+        // border-radius: 0.8rem;
+        .card__icons,
+        .iconc {
+          background: rgba(255, 255, 255, 0.829);
+          border-radius: 0.4rem;
+          width: $h * 0.45;
+          height: $h * 0.45;
+          margin: 0.2rem 0.1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: black;
+          position: relative;
+          .slashIcon {
+            color: rgba(255, 0, 0, 0.555);
+            position: absolute;
+            width: 98%;
+            height: 98%;
+          }
+          .icon {
+            width: 80%;
+            height: 80%;
+          }
+        }
+
+        .iconc {
+          flex-direction: column;
+          .icon {
+            width: 50%;
+            height: 50%;
+          }
+        }
+      }
+    }
+  }
+  .underline {
+    margin: 0.5rem auto;
+    transition: 0.3s all ease-in;
+    align-self: center;
+    box-shadow: 0 0 1rem #ffffffe3;
+    // margin-top: 0.5rem;
+    height: 2px;
+    width: 97%;
+    background-color: #8fafd465;
+    ::after {
+      content: "";
+    }
+  }
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.774);
+    margin-bottom: 0.5rem;
+  }
+  .sliderAboutMe {
+    width: 100%;
+    height: 32rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    // border: red 2px solid;
+  }
+}
+
+.light .aboutMe {
+  .underline {
+    box-shadow: 0 0 1rem rgba(7, 7, 7, 0.753);
+    background-color: rgba(7, 7, 7, 0.219);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .aboutMe {
+    .sliderAboutMe {
+      height: 52rem;
+      width: 70%;
+    }
+  }
+}
