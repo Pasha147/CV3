@@ -16,6 +16,9 @@
       width: 100%;
       margin: 0.25rem auto;
     }
+    textarea {
+      resize: none;
+    }
     .submitBtn {
       margin-top: 0.5rem;
       width: 7rem;
@@ -27,11 +30,27 @@
   .messages {
     .message {
       h3 {
+        padding: 0 1rem 0 0.5rem;
+        display: inline-block;
         text-shadow: 0 0 4px white;
         font-size: 1.2rem;
+        margin-bottom: 0.5rem;
       }
       p {
+        overflow-x: auto;
         text-indent: 20px;
+      }
+      .messageButtons {
+        display: flex;
+        justify-content: center;
+        // border: 1px solid rgba(99, 200, 240, 0.877);
+        .messageBtn {
+          margin: 0.5rem;
+          width: 7rem;
+          border-radius: 0.16rem;
+          background: rgba(99, 200, 240, 0.877);
+          box-shadow: 0 0 0.5rem white;
+        }
       }
     }
   }
