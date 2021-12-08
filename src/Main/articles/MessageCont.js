@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { createMessage, deleteMessge } from "../../redux/actions";
 import "./messageCont.scss";
 
 function MessageForm({ messages, createMessage, deleteMessge }) {
   const [formMessage, setFormMessage] = useState({ name: "", text: "" });
-  const [curMessage, setCurMessage] = useState(-1);
+  const [curMessage, setCurMessage] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
     // messages.push(formMessage);
@@ -18,22 +18,26 @@ function MessageForm({ messages, createMessage, deleteMessge }) {
 
       createMessage({ ...formMessage, date: dateStr });
       setFormMessage({ name: "", text: "" });
+      setCurMessage(false);
     }
-
-    // console.log(messages);
   };
 
   const changeInputHandler = (e) => {
     setFormMessage({ ...formMessage, [e.target.name]: e.target.value });
   };
 
-  const messageClick = (i) => {
-    setCurMessage(i);
+  const clickChange = (i) => {
+    setFormMessage({ name: messages[i].name, text: messages[i].text });
+    deleteMessge(i);
   };
+
+  useEffect(() => {
+    setCurMessage(false);
+  }, [messages]);
 
   return (
     <>
-      <h2>Leave a message</h2>
+      <h2>Send a message</h2>
       <form className="messageForm" onSubmit={submitHandler}>
         <input
           onChange={changeInputHandler}
@@ -57,12 +61,19 @@ function MessageForm({ messages, createMessage, deleteMessge }) {
         </button>
       </form>
       <h2>Messages</h2>
+      <p>(on the localStorage)</p>
       <div className="messages">
         {messages.length === 0 && <p>No messages</p>}
         {messages.length > 0 &&
           messages.map((item, i) => {
             return (
-              <div key={i} className="message" onClick={() => messageClick(i)}>
+              <div
+                key={item.date}
+                className={`message ${
+                  i === curMessage ? "message_active" : ""
+                }`}
+                onClick={() => setCurMessage(i)}
+              >
                 <h3>{item.name}</h3>
                 <span>{`${item.date ? item.date : ""}`}</span>
                 <p>{item.text}</p>
@@ -70,18 +81,15 @@ function MessageForm({ messages, createMessage, deleteMessge }) {
                   <div className="messageButtons">
                     <button
                       className="messageBtn"
-                      onClick={() => {
-                        setFormMessage({ name: item.name, text: item.text });
-                        return deleteMessge(i);
-                      }}
+                      onClick={() => clickChange(i)}
                     >
-                      chage
+                      Change
                     </button>
                     <button
                       className="messageBtn"
                       onClick={() => deleteMessge(i)}
                     >
-                      delete
+                      Delete
                     </button>
                   </div>
                 )}
@@ -105,28 +113,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MessageForm);
-
-/*
-saveBtn.addEventListener('click', (event) => {
-
-    save = {
-        numberBee: input2.value,
-        input: input.value
-    }
-
-    localStorage.setItem('save', JSON.stringify(save))
-
-})
-
-loadBtn.addEventListener('click', (event) => {
-    save = JSON.parse(localStorage.getItem('save'))
-   // console.log(save)
-    
-    input2.value = save.numberBee
-    input.value = save.input
-    numberBee=save.numberBee
-    beecOn=true
-    beeAngr = input.value / 75
-
-})
-*/

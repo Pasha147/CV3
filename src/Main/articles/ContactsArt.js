@@ -1,10 +1,15 @@
 import "./contactsArt.scss";
+import React, { useState } from "react";
 import { FiHome, FiPhone, FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
+import { BiCommentDetail } from "react-icons/bi";
+import { BiXCircle } from "react-icons/bi";
+
 // FiUser,
 import { AiOutlineSkype } from "react-icons/ai";
 import MessageForm from "./MessageCont";
 
 function ContactsArt() {
+  const [messageModal, setMessageModal] = useState(false);
   return (
     <article className="contactsArt">
       <div className="contactsCont">
@@ -49,9 +54,20 @@ function ContactsArt() {
           </div>
           <a href="https://www.linkedin.com/in/pfernati/">pfernati</a>
         </div>
-        <div className="underline"></div>
+        {/* <div className="underline"></div> */}
       </div>
-      <MessageForm />
+      <div className="chat" onClick={() => setMessageModal(true)}>
+        <BiCommentDetail className="icon" />
+        <p>Send a message</p>
+      </div>
+      <div className={`modal ${messageModal ? "modal_active" : "modal_off"}`}>
+        <BiXCircle
+          className="closeIcon"
+          onClick={() => setMessageModal(false)}
+        />
+
+        <MessageForm setMessageModal={setMessageModal} />
+      </div>
     </article>
   );
 }

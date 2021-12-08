@@ -1,4 +1,5 @@
 .contactsArt {
+  position: relative;
   height: auto;
   transition: 0.3s all ease-in;
   // border: white 1px solid;
@@ -60,9 +61,60 @@
       }
     }
   }
+  .chat {
+    font-size: 1.2rem;
+    padding: 00.5rem;
+    background: rgba(24, 70, 88, 0.801);
+    position: absolute;
+    right: 0.5rem;
+    bottom: 5%;
+    border: 2px solid rgba(255, 255, 255, 0.575);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.712);
+    border-radius: 0.6rem;
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .modal {
+    background: rgba(24, 70, 88, 0.89);
+    border: 2px solid rgba(255, 255, 255, 0.575);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.712);
+    border-radius: 0.6rem;
+    padding: 0.5rem 0;
+    position: absolute;
+    width: 90%;
+    max-width: 32rem;
+    height: 90%;
+    overflow-y: auto;
+    right: 0.5rem;
+    bottom: 5%;
+    .closeIcon {
+      color: rgba(255, 255, 255, 0.856);
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  .modal_active {
+    transition: all 0.4s ease-in;
+    transform: translate(0%, 0%) scale(1, 1);
+  }
+  .modal_off {
+    transition: all 0.4s ease-in;
+    transform: translate(50%, 48%) scale(0, 0);
+  }
 }
 
 .light .contactsArt {
+  h2 {
+    color: white;
+  }
+
   .itemConteiner {
     p,
     a {
