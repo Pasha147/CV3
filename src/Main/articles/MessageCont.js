@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { createMessage, deleteMessge } from "../../redux/actions";
+import { createMessage, deleteMessge, sendMessageF } from "../../redux/actions";
 import "./messageCont.scss";
 
-function MessageForm({ messages, createMessage, deleteMessge }) {
+function MessageForm({ messages, createMessage, deleteMessge, sendMessageF }) {
   const [formMessage, setFormMessage] = useState({ name: "", text: "" });
   const [curMessage, setCurMessage] = useState(false);
   const submitHandler = (e) => {
@@ -17,6 +17,7 @@ function MessageForm({ messages, createMessage, deleteMessge }) {
         `${date.getMinutes()}:${date.getSeconds()}`;
 
       createMessage({ ...formMessage, date: dateStr });
+      sendMessageF({ ...formMessage, date: dateStr });
       setFormMessage({ name: "", text: "" });
       setCurMessage(false);
     }
@@ -110,6 +111,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
   createMessage,
   deleteMessge,
+  sendMessageF,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MessageForm);

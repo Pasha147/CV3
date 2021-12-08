@@ -1,15 +1,17 @@
 import "./contactsArt.scss";
-import React, { useState } from "react";
+import React from "react";
 import { FiHome, FiPhone, FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 import { BiCommentDetail } from "react-icons/bi";
-import { BiXCircle } from "react-icons/bi";
+import { useDispatch, useSelector } from "react-redux";
+import { chatClose, chatOpen } from "../../redux/actions";
 
-// FiUser,
+import { BiXCircle } from "react-icons/bi";
 import { AiOutlineSkype } from "react-icons/ai";
 import MessageForm from "./MessageCont";
 
 function ContactsArt() {
-  const [messageModal, setMessageModal] = useState(false);
+  const dispatch = useDispatch();
+  const chatOn = useSelector((state) => state.messages.chatOpen);
   return (
     <article className="contactsArt">
       <div className="contactsCont">
@@ -56,17 +58,17 @@ function ContactsArt() {
         </div>
         {/* <div className="underline"></div> */}
       </div>
-      <div className="chat" onClick={() => setMessageModal(true)}>
+      <div className="chat" onClick={() => dispatch(chatOpen())}>
         <BiCommentDetail className="icon" />
         <p>Send a message</p>
       </div>
-      <div className={`modal ${messageModal ? "modal_active" : "modal_off"}`}>
+      <div className={`modal ${chatOn ? "modal_active" : "modal_off"}`}>
         <BiXCircle
           className="closeIcon"
-          onClick={() => setMessageModal(false)}
+          onClick={() => dispatch(chatClose())}
         />
 
-        <MessageForm setMessageModal={setMessageModal} />
+        <MessageForm />
       </div>
     </article>
   );

@@ -11,7 +11,7 @@ function Skills() {
     })
   );
 
-  const [filtersOn, setFiltersOn] = useState(false);
+  const [filtersOn, setFiltersOn] = useState(true);
 
   //    console.log("types:>>", types);
   const skillCard = (item) => {
