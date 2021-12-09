@@ -46,7 +46,7 @@ export function sendMessageF(message) {
   return async (dispatch) => {
     // const url = `http://localhost:3000/api/data/${5}`;
 
-    const url = `https://myserverpf.herokuapp.com/api/data`;
+    const url = `https://fpcv.herokuapp.com/api/data/${5}`;
     const resp = await request(url, "POST", message);
     console.log("resp-->", resp);
 
