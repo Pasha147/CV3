@@ -4,7 +4,7 @@ import "./footer.scss";
 function Footer() {
   return (
     <footer className="footer">
-      <p>Copyright 2021</p>
+      <p>© 2021 By Pasha Fernati</p>
       <Contacts />
     </footer>
   );

@@ -1,9 +1,10 @@
 .footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0.5rem;
   transition: 0.3s all ease-in;
-  box-shadow: 0px 0.5rem 0.5rem #283549;
+  // box-shadow: 0px 0.5rem 0.5rem #283549;
   position: relative;
   color: #ffffffda;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
@@ -19,6 +20,7 @@
   background-size: cover;
   p {
     width: 50%;
+    min-width: 12rem;
   }
   .contacts {
     justify-content: end;

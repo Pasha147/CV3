@@ -1,7 +1,7 @@
 import React from "react";
 import "./contacts.scss";
-import { FiHome, FiPhone, FiMail, FiGithub } from "react-icons/fi";
-// FiUser,
+import { FiPhone, FiMail, FiGithub } from "react-icons/fi";
+// FiUser,  FiHome
 import { AiOutlineSkype } from "react-icons/ai";
 
 function Contacts() {
@@ -10,9 +10,9 @@ function Contacts() {
       {/* <li>
             <FiUser className="contacts__item" />
           </li> */}
-      <li>
+      {/* <li>
         <FiHome className="contacts__item" />
-      </li>
+      </li> */}
       <li>
         <FiPhone className="contacts__item" />
       </li>
