@@ -27,6 +27,7 @@
     }
   }
   &__info {
+    position: relative;
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
@@ -41,6 +42,19 @@
   h2 {
     font-size: 1.5rem;
     margin-top: 1rem;
+  }
+  .themeBtn {
+    border-radius: 0.2rem;
+    padding: 0 0.25rem;
+    position: absolute;
+    right: 0.1rem;
+    top: 0.1rem;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(150, 150, 150, 0.5),
+        rgba(39, 39, 39, 0.87)
+      ),
+      url("../img/river1.jpg");
   }
   .underline {
     box-shadow: 0 0 1rem #ffffffe3;
@@ -66,7 +80,17 @@
       rgba(54, 60, 65, 0.808)
     ),
     url("../img/river1.jpg");
-
+  button {
+    color: rgba(217, 250, 237, 0.705);
+    // background-color: rgba(27, 37, 44, 0.863);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(112, 112, 112, 0.5),
+        rgba(39, 39, 39, 0.87)
+      ),
+      url("../img/river1.jpg");
+    box-shadow: 0 0 0.25rem rgba(84, 90, 95, 0.747);
+  }
   &__logo {
     img {
       border: 2px solid #5a6f883f;
@@ -88,6 +112,10 @@
       img {
         width: 12rem;
       }
+    }
+    .themeBtn {
+      padding: 0.25rem;
+      font-size: 1.4rem;
     }
   }
 }

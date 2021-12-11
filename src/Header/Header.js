@@ -25,6 +25,9 @@ function Header() {
         <div className="underline"></div>
         <h2 className="header__subtitle">Web developer</h2>
         {/* <Contacts /> */}
+        <button className="themeBtn" onClick={changeTheme}>
+          Theme
+        </button>
       </div>
     </header>
   );
