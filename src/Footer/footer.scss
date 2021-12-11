@@ -1,14 +1,8 @@
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem;
-  transition: 0.3s all ease-in;
-  // box-shadow: 0px 0.5rem 0.5rem #283549;
   position: relative;
+  min-height: 3rem;
+  padding: 0.5rem;
   color: #ffffffda;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-  text-align: center;
   background-image: linear-gradient(
       to bottom,
       rgb(0, 0, 0, 0.5),
@@ -18,25 +12,13 @@
 
   background-repeat: no-repeat;
   background-size: cover;
+
   p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 50%;
     min-width: 12rem;
-  }
-  .contacts {
-    justify-content: end;
-
-    $d: 2rem;
-    $d1: $d * 0.65;
-    li {
-      margin: 0 0.2rem;
-      width: $d;
-      height: $d;
-    }
-
-    &__item {
-      width: $d1;
-      height: $d1;
-    }
   }
 }
 

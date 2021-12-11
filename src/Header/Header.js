@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./header.scss";
-import Contacts from "./Contacts";
+// import Contacts from "./Contacts";
 
 function Header() {
   const [theme, setTheme] = useState("dark");
@@ -22,9 +22,9 @@ function Header() {
       <div className="header__info">
         <h1 className="header__title">Pavlo Fernati</h1>
 
-        <h2 className="header__subtitle">Web developer</h2>
         <div className="underline"></div>
-        <Contacts />
+        <h2 className="header__subtitle">Web developer</h2>
+        {/* <Contacts /> */}
       </div>
     </header>
   );

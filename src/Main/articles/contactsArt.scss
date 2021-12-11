@@ -63,19 +63,28 @@
   }
   .chat {
     font-size: 1.2rem;
-    padding: 00.5rem;
-    background: rgba(24, 70, 88, 0.801);
+    // padding: 00.5rem;
+    // background: rgba(24, 70, 88, 0.801);
     position: absolute;
-    right: 0.5rem;
+    right: 0.8rem;
     bottom: 5%;
-    border: 2px solid rgba(255, 255, 255, 0.575);
-    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.712);
-    border-radius: 0.6rem;
+    // border: 2px solid rgba(255, 255, 255, 0.575);
+    // box-shadow: 0 0 1rem rgba(255, 255, 255, 0.712);
+    // border-radius: 0.6rem;
     .icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      display: block;
-      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.925);
+      width: 8rem;
+      height: 6rem;
+      padding: 0;
+      // object-fit: inherit;
+      // display: block;
+      // margin: 0 auto;
+      // border: white 1px solid;
+    }
+    p {
+      position: absolute;
+      top: 18%;
+      left: 20%;
     }
   }
   .modal {
