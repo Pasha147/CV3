@@ -87,7 +87,7 @@ export const nav = [
 export const mainArts = [
   {
     header: "Skills",
-    numberRows: 4,
+    numberRows: 2,
     text: [
       "•	HTML, CSS (BEM), SASS (SCSS), Bootstrap,... ",
       "• JavaScript (ES6), React, Redux, RxJS, . . . ",

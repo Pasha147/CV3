@@ -31,14 +31,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
   }
   h1 {
     font-weight: 600;
     font-size: 2.6rem;
+    margin-bottom: 2rem;
   }
   h2 {
     font-size: 1.5rem;
+    margin-top: 1rem;
   }
   .underline {
     box-shadow: 0 0 1rem #ffffffe3;

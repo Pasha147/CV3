@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./mainart.scss";
 import { mainArts } from "../../appdata";
 import Mainanim from "./Mainanim";
+import { VscFilePdf } from "react-icons/vsc";
 
 function Mainart() {
   const [moreArr, setMoreArr] = useState(
@@ -35,6 +36,12 @@ function Mainart() {
           </div>
         );
       })}
+      <div className="cvpdf">
+        <span>My CV in PDF</span>
+        <a href="./PAVEL V_4.pdf" download="./PAVEL V_4.pdf">
+          <VscFilePdf className="cvpdfIcon" />
+        </a>
+      </div>
     </article>
   );
 }

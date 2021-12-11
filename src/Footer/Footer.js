@@ -1,11 +1,11 @@
-import Contacts from "../Header/Contacts";
+// import Contacts from "../Header/Contacts";
 import "./footer.scss";
 
 function Footer() {
   return (
     <footer className="footer">
-      <p>Copyright 2021</p>
-      <Contacts />
+      <p>© 2021 By Pasha Fernati</p>
+      {/* <Contacts /> */}
     </footer>
   );
 }
