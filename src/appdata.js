@@ -90,9 +90,9 @@ export const mainArts = [
     numberRows: 2,
     text: [
       "•	HTML, CSS (BEM), SASS (SCSS), Bootstrap,... ",
-      "• JavaScript (ES6), React, Redux, RxJS, . . . ",
+      "• JavaScript (ES6), React, Redux, MERN, RxJS,... ",
       "• Node JS (Express, ejs, . . .)",
-      "•	Git, Gulp, Firebase, Heroku, Netlyfy,. . . ",
+      "•	Git, Gulp, MongoDB, Firebase, Heroku, Netlyfy,. . . ",
       "• VS Code, WebStorm, Prepros, Zeplin, . . . ",
       "•	C#, C++, Matlab, QBasic",
       "•	Photoshop, MathCad, Autocad, . . .",
