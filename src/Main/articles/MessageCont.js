@@ -62,7 +62,7 @@ function MessageForm({ messages, createMessage, deleteMessge, sendMessageF }) {
         </button>
       </form>
       <h2>Messages</h2>
-      <p>(on the localStorage)</p>
+      <p>(Your messages on the LocalStorage)</p>
       <div className="messages">
         {messages.length === 0 && <p>No messages</p>}
         {messages.length > 0 &&

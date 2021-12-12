@@ -21,7 +21,10 @@ function init() {
 export const messageReducer = (state = init(), action) => {
   switch (action.type) {
     case CREATE_MESSAGE: {
-      let newMessages = [...state.messages, { ...action.payload }];
+      let newMessages = [];
+      state.messages.length >= 10
+        ? (newMessages = [...state.messages.slice(1), { ...action.payload }])
+        : (newMessages = [...state.messages, { ...action.payload }]);
       localStorage.setItem("messages", JSON.stringify(newMessages));
       return { ...state, messages: [...newMessages] };
       //return { ...state, messages: state.messages.concat(action.payload) };
