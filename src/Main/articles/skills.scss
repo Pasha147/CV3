@@ -72,7 +72,12 @@
       justify-content: center;
       align-items: center;
       background-color: rgba(84, 120, 141, 0.685);
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
       &__icon {
+        border: chartreuse 1px solid;
         width: 2rem;
         height: 2rem;
         margin: 0.25rem auto;

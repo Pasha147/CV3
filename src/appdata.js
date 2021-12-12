@@ -16,7 +16,13 @@ import {
   SiWebstorm,
 } from "react-icons/si";
 import { GrHeroku } from "react-icons/gr";
-import { DiCss3, DiSass, DiPhotoshop, DiJavascript1 } from "react-icons/di";
+import {
+  DiCss3,
+  DiSass,
+  DiPhotoshop,
+  DiJavascript1,
+  DiMongodb,
+} from "react-icons/di";
 import { BsBootstrap } from "react-icons/bs";
 import { FiGithub } from "react-icons/fi";
 import { GiZeppelin } from "react-icons/gi";
@@ -247,6 +253,13 @@ export const skills = [
     type: "technology",
   },
   {
+    id: 30,
+    name: "MERN",
+    text: null,
+    icon: <img className="icon1" src="./img/mern2.png" alt="mern" />,
+    type: "technology",
+  },
+  {
     id: 11,
     name: "Gulp",
     text: null,
@@ -258,6 +271,13 @@ export const skills = [
     name: "Firebase",
     text: null,
     icon: <IoLogoFirebase className="card__icon" />,
+    type: "netResources",
+  },
+  {
+    id: 31,
+    name: "MongoDB",
+    text: null,
+    icon: <DiMongodb className="card__icon" />,
     type: "netResources",
   },
   {
