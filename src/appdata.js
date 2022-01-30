@@ -8,7 +8,7 @@ import AboutMe from "./Main/articles/Aboutme";
 
 //SKILLS
 import { IoLogoJavascript, IoLogoFirebase } from "react-icons/io5";
-import { FaReact, FaNodeJs, FaGulp, FaHtml5 } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGulp, FaHtml5, FaAngular } from "react-icons/fa";
 import {
   SiRedux,
   SiNetlify,
@@ -96,9 +96,11 @@ export const mainArts = [
     numberRows: 2,
     text: [
       "•	HTML, CSS (BEM), SASS (SCSS), Bootstrap,... ",
-      "• JavaScript (ES6), React, Redux, MERN, RxJS,... ",
+      "• JavaScript (ES6), Angular, React, Redux, ",
+      "MEAN, MERN, RxJS,... ",
       "• Node JS (Express, ejs, . . .)",
-      "•	Git, Gulp, MongoDB, Firebase, Heroku, Netlyfy,. . . ",
+      "•	Git, Gulp, MongoDB, Firebase,",
+      "Heroku, Netlyfy,. . . ",
       "• VS Code, WebStorm, Prepros, Zeplin, . . . ",
       "•	C#, C++, Matlab, QBasic",
       "•	Photoshop, MathCad, Autocad, . . .",
@@ -171,6 +173,7 @@ export const mainAnim = [
   <ImHtmlFive2 className="card__icon" />,
   <DiCss3 className="card__icon" />,
   <DiJavascript1 className="card__icon" />,
+  <FaAngular className="card__icon" />,
   <FaReact className="card__icon" />,
   <SiRedux className="card__icon" />,
   <FaNodeJs className="card__icon" />,
@@ -765,6 +768,27 @@ export const projInfo = [
         <p>2021</p>
         <p>The website for the "Гипсокартон Про" company.</p>
         <a href="https://gipsokartonpro1014.netlify.app/">GipsokartonPro</a>
+      </>
+    ),
+  },
+  {
+    //OksanaLawyer
+    img: "./img/projects/12.jpg",
+    name: "ReactJS ",
+
+    position1: {
+      bottom: "28%",
+      left: "10%",
+      transform: "rotate(-5deg) ",
+    },
+    header: "OvLawyer",
+    text: (
+      <>
+        <p>Technology: Angular, TypeScript, NodeJS, Mongo DB</p>
+        <p>Responsive web design</p>
+        <p>2022</p>
+        <p>The website for the "OVLawyer" company.</p>
+        <a href="https://ovlawyer.netlify.app">OVLawyer</a>
       </>
     ),
   },
