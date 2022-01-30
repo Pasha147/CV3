@@ -96,8 +96,8 @@ export const mainArts = [
     numberRows: 2,
     text: [
       "•	HTML, CSS (BEM), SASS (SCSS), Bootstrap,... ",
-      "• JavaScript (ES6), Angular, React, Redux, ",
-      "MEAN, MERN, RxJS,... ",
+      "• JavaScript (ES6), TypeScript, Angular, React, ",
+      "Redux, MEAN, MERN, RxJS,... ",
       "• Node JS (Express, ejs, . . .)",
       "•	Git, Gulp, MongoDB, Firebase,",
       "Heroku, Netlyfy,. . . ",
@@ -774,7 +774,7 @@ export const projInfo = [
   {
     //OksanaLawyer
     img: "./img/projects/12.jpg",
-    name: "ReactJS ",
+    name: "Angular",
 
     position1: {
       bottom: "28%",
