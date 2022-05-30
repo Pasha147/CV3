@@ -810,7 +810,7 @@ export const slider = [
   {
     title: "Aquarium",
     image: "../img/slider/3.jpg",
-    text: "These are my fish",
+    text: "These are my fishes",
   },
   {
     title: "Tourism",
