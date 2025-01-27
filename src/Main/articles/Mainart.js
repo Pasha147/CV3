@@ -38,7 +38,7 @@ function Mainart() {
       })}
       <div className="cvpdf">
         <span>My CV in PDF</span>
-        <a href="./PAVEL V_5.pdf" download="./PAVEL V_5.pdf">
+        <a href="fpv_front_25G1.pdf" download="./fpv_front_25G1.pdf">
           <VscFilePdf className="cvpdfIcon" />
         </a>
       </div>
